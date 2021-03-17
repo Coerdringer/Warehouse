@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product list</title>
+    <link rel="stylesheet" type="text/css" href="productListPage.css">
+</head>
+<body>
+<a href="/index" class="button">Back</a>
+
+<div style="overflow-x:auto;">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+
+        <div th:each="product : ${productsList}">
+            <tr>
+                <td><div th:text="${product.id}"></div></td>
+                <td>
+                    <div th:if="${product.ALARM >= product.quantity}">
+                        <div style="color: #FF0000" th:text="${product.name}"></div>
+                    </div>
+                    <div th:if="${product.ALARM < product.quantity}">
+                        <div th:text="${product.name}"></div>
+                    </div>
+                </td>
+                <td><div th:text="${product.category}"></div></td>
+                <td><div th:text="${product.price}"></div></td>
+                <td><div th:text="${product.quantity}"></div></td>
+            </tr>
+        </div>
+    </table>
+</div>
+</body>
+</html>

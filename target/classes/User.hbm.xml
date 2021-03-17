@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="pl.edu.wszib.warehouse.model.hardcode.User" table="tuser">
+        <id name="userId" column="id" type="int">
+            <generator class="native"/>
+        </id>
+        <property name="login" column="Login" type="string"/>
+        <property name="pass" column="Password" type="string"/>
+
+    </class>
+</hibernate-mapping>

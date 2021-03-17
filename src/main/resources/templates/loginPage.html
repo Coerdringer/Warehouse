@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>LoginApp</title>
+    <link rel="stylesheet" type="text/css" href="loginpage.css">
+</head>
+    <body>
+        <div class="connect">
+            <form method="post">
+                <div class="navigation">
+                    <input type="text" class="button" placeholder="Login" name="login" th:field="*{userKey.login}">
+                    <input type="password" class="button" placeholder="Password" name="password" th:field="*{userKey.pass}">
+                </div>
+                <div class="navigation">
+                    <input type="submit" class="button1" value="OK">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

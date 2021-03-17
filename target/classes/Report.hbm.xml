@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="pl.edu.warehouse.model.Report" table="treport">
+        <id name="reportId" column="id" type="int">
+            <generator class="native"/>
+        </id>
+        <property name="locationId" column="locationId" type="int"/>
+        <property name="productName" column="productName" type="string"/>
+        <property name="quantity" column="quantity" type="int"/>
+        <property name="shopName" column="shopName" type="string"/>
+        <property name="username" column="username" type="string"/>
+    </class>
+</hibernate-mapping>
